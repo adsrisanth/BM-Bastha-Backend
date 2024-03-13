@@ -55,5 +55,6 @@ app.post('/test/whatsapp' , testWhatsapp)
 
 app.post('/test/mobile', (req , res) => {
   const { text, li } = req.body
-  res.json({code:1 , message: 'Sent' , list:[1 , 2 , 3 , 4]})
+  console.log(text , li)
+  res.json({code:17 , message: 'Hello Praneeth' , list:[1 , 2 , 3 , 4]})
 })
