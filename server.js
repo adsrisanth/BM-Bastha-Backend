@@ -48,3 +48,12 @@ app.use('/api/admin/item', verifyToken, adminItemRouter)
 //     console.log(req)
 //     return res.json({code:1 , message: 'Token Verified' , extra:req})
 // })
+
+
+const testWhatsapp = require("./controller/whatsapp/test");
+app.post('/test/whatsapp' , testWhatsapp)
+
+app.post('/test/mobile', (req , res) => {
+  const { text, li } = req.body
+  res.json({code:1 , message: 'Sent' , list:[1 , 2 , 3 , 4]})
+})
